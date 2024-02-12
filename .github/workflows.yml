@@ -1,1 +1,19 @@
+#name of the workflow
+name: CI workflow
 
+# Controls when the workflow will run
+on: 
+
+push: 
+  branches: "main"
+pull_request: 
+  branches: "main"
+
+# A workflow job lists
+jobs:
+  #build job command
+  build:
+  # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+      container: python:3.9-slim
